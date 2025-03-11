@@ -3,26 +3,97 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Coding Across Cultures</title>
 
         <style>
             body {
-                background-color: rgb(7, 39, 22);
+                display: flex; /* centers the gallery */
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                overflow: hidden;
+                background-color: rgb(30, 29, 29);
                 color: white;
                 font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
             }
             h1 {
-                color: forestgreen;
+                display: flex; /* centers the gallery */
+                justify-content: center;
+                align-items: top;
+                height: 100vh;
+                overflow: hidden;
+                color: rgb(255, 255, 255);
+            }
+            .gallery{
+                position: relative;
+                width: 300px;
+                height: 300px;
+                transform-style: preserve-3d; /* enables 3D transformations */
+            }
+            .gallery img{
+                position: absolute; /* allows images to rotate circular */
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 10px; /* rounds the corners */
+                transition: transform 0.5s ease-out; /* smoothens the transition */
+                cursor: pointer; /* changes cursor to pointer */
+            }
+            .tooltip{
+                position: absolute;
+                background: rgba(0, 0, 0, 0.8);
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+                display: none; /* hides the tooltip */
+                text-align: center;
+                max-width: 200px;
             }
         </style>
 
     </head>
     <body>
         <h1>Coding Across Cultures</h1>
-        <h2>Placeholder</h2>
-        <p> Hi, I'm a paragraph! <br> 
-            I'm a paragraph with a line break! <br>
-            I'm a paragraph with a line break! <br>
-        </p>
+        <div class="gallery" id="gallery"></div> <!-- Gallery will be displayed here -->
+        <div class="tooltip" id="tooltip"></div> <!-- Tooltip will display cultural facts when hovering over an image -->
+        <script>
+            const gallery = document.getElementById('gallery'); // gets the gallery element
+            const tooltip = document.getElementById('tooltip'); // gets the tooltip element
+
+            const images = [
+                {src: "images/senpon_placeholder.jpg", fact: "Thank you for today. 今日もありがとございまうす"},
+                {src: "images/senpon_placeholder.jpg", fact: "Good Morning. おはよう"},
+                {src: "images/senpon_placeholder.jpg", fact: "Good Evening. こんばんわ"},
+                {src: "images/senpon_placeholder.jpg", fact: "Hello. こんにちわ"},
+                {src: "images/senpon_placeholder.jpg", fact: "Thank you for today. 今日もありがとございまうす"}
+            ]
+
+            images.forEach((data, index) => {
+                let img = document.createElement("img"); // creates an image element
+                img.src = data.src; // sets the image source
+                let angle = (index / images.length) * 360; // calculates the angle of rotation
+                img.style.transform = `rotateY(${angle}deg) translateZ(150px)`; // rotates the image
+                img.dataset.fact = data.fact; // sets the data attribute
+
+                img.addEventListener("mouseover", (e) => {
+                    tooltip.innerHTML = img.dataset.fact; // sets the tooltip content
+                    tooltip.style.display = "block"; // displays the tooltip
+                    tooltip.style.left = `${e.pageX + 10}px`; // sets the tooltip position
+                    tooltip.style.top = `${e.pageY + 10}px`; // sets the tooltip position
+                });
+
+                img.addEventListener("mouseout", () => {
+                    tooltip.style.display = "none"; // hides the tooltip
+                });
+
+                gallery.appendChild(img); // appends the image to the gallery
+            });
+
+            document.addEventListener("mousemove", (e) => {
+                let mouseX = (e.clientX / window.innerWidth - 0.5) * 60; // calculates the mouse position
+                let mouseY = (e.clientY / window.innerHeight - 0.5) * 60; // calculates the mouse position
+                gallery.style.transform = `rotateY(${mouseX}deg) rotateX(${-mouseY}deg)`; // rotates the gallery
+                });
+        </script>
     </body>
 </html>
