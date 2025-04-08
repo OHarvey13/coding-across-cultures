@@ -4,7 +4,7 @@ body {
     align-items: center;
     height: 100vh;
     overflow: hidden;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
 }
 
@@ -14,7 +14,25 @@ h1 {
     align-items: left;
     height: 100vh;
     overflow: hidden;
+    color: rgb(0, 0, 0);
+}
+
+button {
+    background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#fact-en {
+    color: blue;
+}
+
+#fact-jp {
+    color: red;
 }
 .gallery{
     position: relative;
@@ -34,7 +52,7 @@ h1 {
 .tooltip{
     position: absolute;
     background: rgba(0, 0, 0, 0.8);
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 10px;
     border-radius: 5px;
     display: none; /* hides the tooltip */
