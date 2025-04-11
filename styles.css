@@ -35,28 +35,33 @@ button {
     color: red;
 }
 
+.swing-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: swing 5s infinite ease-in-out;
+}
+
 .web-photo{
     position: absolute;
     top: 0;
-    left: 25px;
+    left: 50px;
     display: flex;
-    align-items: center;
     cursor: grab;
-    animation: swing 5s infinite ease-in-out;
+    justify-content: center;
 }
 
 .web-line{
     width: 2px;
-    height: 500px;
+    height: 300px;
     background: linear-gradient(to bottom, #ccc, #aaa);
 }
 
 .hanging-photo{
-    margin-top: -5px;
     width: 150px;
     transform-origin: top center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    animation: swing 5s infinite ease-in-out;
+    margin: 0;
 }
 
 @keyframes swing {
@@ -65,4 +70,29 @@ button {
     50% { transform: rotate(0deg); }
     75% { transform: rotate(-3deg); }
     100% { transform: rotate(0deg); }
+}
+:root{
+    --pixel-size: 0.3;
+}
+
+.spiderman-container{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: calc(300px * var(--pixel-size));
+    height: calc(300px * var(--pixel-size));
+    image-rendering: pixelated;
+    animation: moveRight 5s linear infinite;
+}
+
+.spiderman{
+    position: absolute;
+    width: auto;
+    height: 100%;
+    image-rendering: pixelated;
+}
+
+@keyframes moveRight {
+    0% { left: 0; }
+    100% { left: calc(100vw - 64px); }
 }
