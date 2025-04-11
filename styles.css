@@ -35,28 +35,33 @@ button {
     color: red;
 }
 
+.swing-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: swing 5s infinite ease-in-out;
+}
+
 .web-photo{
     position: absolute;
     top: 0;
-    left: 25px;
+    left: 50px;
     display: flex;
-    align-items: center;
     cursor: grab;
-    animation: swing 5s infinite ease-in-out;
+    justify-content: center;
 }
 
 .web-line{
     width: 2px;
-    height: 500px;
+    height: 300px;
     background: linear-gradient(to bottom, #ccc, #aaa);
 }
 
 .hanging-photo{
-    margin-top: -5px;
     width: 150px;
     transform-origin: top center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    animation: swing 5s infinite ease-in-out;
+    margin: 0;
 }
 
 @keyframes swing {
@@ -66,44 +71,28 @@ button {
     75% { transform: rotate(-3deg); }
     100% { transform: rotate(0deg); }
 }
-
-:root {
-   --pixel-size: 0.2;
+:root{
+    --pixel-size: 0.3;
 }
 
-body {
-   background: #96ffc1;
-}
-.Character-container {
-   position: absolute;
-   top: 10px;
-   left: 0px;
-   animation: walk-across 4s linear infinite;
-}
-.Character {
-   width: calc(300px * var(--pixel-size));
-   height: calc(340px * var(--pixel-size));
-   overflow: hidden;
-   position: relative;
-   margin: 4em auto;
+.spiderman-container{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: calc(300px * var(--pixel-size));
+    height: calc(300px * var(--pixel-size));
+    image-rendering: pixelated;
+    animation: moveRight 5s linear infinite;
 }
 
-.Character_spritesheet {
-   animation: moveSpritesheet 1s steps(4) infinite;
-   width: calc(1200px * var(--pixel-size));
-   position: absolute;
-   image-rendering: pixelated;
+.spiderman{
+    position: absolute;
+    width: auto;
+    height: 100%;
+    image-rendering: pixelated;
 }
-@keyframes moveSpritesheet {
-   from {
-      transform: translate3d(0px,0,0)
-   }
-   to {
-      transform: translate3d(-100%,0,0)
-   }
+
+@keyframes moveRight {
+    0% { left: 0; }
+    100% { left: calc(100vw - 64px); }
 }
- @keyframes walk-across {
-    from { background-position: 0 0; }
-    to { background-position: -1200px 0; }
-    
- }
