@@ -1,12 +1,21 @@
-
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('images/grain.png');
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: -1;
+}
 
 body {
-    position: relative;
-    height: 100vh;
-    margin: 0;
-    background-color: white;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    overflow: hidden;
+    background: radial-gradient(circle, #fdf6e3 0%, #f5e7c4 100%);
+    background-attachment: fixed;
+    color: #3b2f2f;
+    font-family: 'Georgia', serif;
 }
 
 h1 {
@@ -25,6 +34,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    position: absolute;
+    top: 500px;
 }
 
 #fact-en {
@@ -77,12 +88,12 @@ button {
 
 .spiderman-container{
     position: absolute;
-    top: 20px;
+    top: 40px;
     left: 0;
     width: calc(300px * var(--pixel-size));
     height: calc(300px * var(--pixel-size));
     image-rendering: pixelated;
-    animation: moveRight 5s linear infinite;
+    animation: moveRight 10s linear infinite;
 }
 
 .spiderman{
