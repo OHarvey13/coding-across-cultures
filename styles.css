@@ -88,7 +88,7 @@ button {
 
 .spiderman-container{
     position: absolute;
-    top: 40px;
+    top: 45px;
     left: 0;
     width: calc(300px * var(--pixel-size));
     height: calc(300px * var(--pixel-size));
