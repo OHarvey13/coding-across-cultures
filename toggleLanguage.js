@@ -1,13 +1,9 @@
-function toggleLanguage() {
-    const en = document.getElementById('fact-en') // Get the English element by ID
-    const jp = document.getElementById('fact-jp') // Get the Japanese element by ID
-    if (en.style.display ==='none') { // checks if English is hidden
-        // If English is hidden, show it
-        en.style.display = 'block';
-        jp.style.display = 'none';
-    } else {
-        // If English is visible, hide it
-        en.style.display = 'none';
-        jp.style.display = 'block';
-    }
-}
+// Gets the button element and the current language from the body attribute
+const button = document.getElementById('toggle-lang');
+
+// Adds an event listener to the button to toggle the language
+button.addEventListener('click', () => {
+    const currLang = document.body.getAttribute('data-lang'); // Gets the current language from the body attribute
+    const newLang = currLang === 'en' ? 'ja' : 'en'; // Checks the current language and flips to the other one
+    document.body.setAttribute('data-lang', newLang); // returns a string of the new language
+});

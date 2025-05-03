@@ -8,28 +8,53 @@
         <link rel="stylesheet" href= "styles.css" >
 
     </head>
-    <body>
-        <h1>
-            <span class="lang-en" lang="en"> Coding Across Cultures </span>
-            <span class = "lang-ja" lang="ja" > 文化を越えたコーディング </span>
-        </h1>
 
+    <body data-lang = "en">
+        <!-- Header -->
+        <header>
+            <h1>
+                <span class="lang-en" lang="en"> Coding Across Cultures </span>
+                <span class = "lang-ja" lang="ja" > 文化を越えたコーディング </span>
+            </h1>
+            <button id="toggle-lang"> 切り替え / Toggle</button> 
+        </header>
+        
+        <!-- Spiderman Animation -->
         <div class = "spiderman-container">
-            <img id = "spiderman" class="spiderman" src="images/spiderman-frames/frame-01.png" alt="Spiderman">
+            <img id = "spiderman" 
+            class="spiderman" 
+            src="images/spiderman-frames/frame-01.png" 
+            alt="Spiderman">
         </div>
-        <script src="spiderman-animation.js"></script>
-
+        
+        <!-- Cultural Photo -->
         <div class="web-photo" style="left: 50px;">
             <div class = "swing-wrapper">
                 <div class = "web-line"></div>
-                <img class = "hanging-photo" src="images/senpon_placeholder.jpg" alt="Cultural photo">
+                <img 
+                class = "hanging-photo" 
+                src="images/senpon_placeholder.jpg" 
+                alt="Cultural photo"/>
             </div>
         </div>
+        
+        <!-- Cultural Fact -->
+        <p>
+            <span class="tooltip">
+            <span class = "tooltip lang-en"> 
+                Japanese convenience stores are open 24/7.
+            </span>
+            <span class = "lang-ja" lang="ja"> 
+                日本のコンビニは24時間営業しています。
+            </span>
+        </span>
 
-        <p id = "fact-en"> Japanese convenience stores are open 24/7.</p>
-        <p id = "fact-jp"> 日本のコンビニは24時間営業しています</p>
+        </p>
+        
 
-        <button onclick="toggleLanguage()"> 切り替え / Toggle</button> 
+
+        <!-- Scripts -->
+        <script src="spiderman-animation.js"></script>
         <script src = "toggleLanguage.js"></script> 
     </body>
 </html>
