@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# 🌏 Coding Across Cultures – 3D Interactive Experience
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Explore cultural landmarks in an immersive 3D environment, with multilingual support in English and Japanese.  
+Click on locations to reveal cultural facts, and use the toggle to switch between languages.
 
-## Available Scripts
+Built with React, Three.js, and @react-three/fiber.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🌐 Interactive 3D models of landmarks (GLTF)
+- 🗺️ Click-to-explore cultural locations
+- 🈯 Multilingual support: English 🇺🇸 & Japanese 🇯🇵
+- 🧠 Translation powered by i18next + language toggle
+- 🔁 Smooth camera movement and animation support via Drei/GSAP
+- 💡 Clean, modular structure using modern React best practices
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📁 Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+public/
+  ├─ models/               # 3D .glb files
+  └─ locales/
+      ├─ en/translation.json
+      └─ ja/translation.json
 
-### `npm run build`
+src/
+  ├─ components/           # UI elements (language toggle, overlays)
+  ├─ scenes/               # 3D canvas and model loaders
+  ├─ data/                 # Cultural facts
+  ├─ i18n.js               # i18next configuration
+  └─ App.jsx               # Main app component
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧪 Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 📦 Install dependencies
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🧭 Start the development server
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🌐 Language Toggle
 
-## Learn More
+Use the toggle in the UI to switch between:
+- English (`en`)
+- Japanese (`ja`)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Translations are stored in:
+```
+/public/locales/en/translation.json
+/public/locales/ja/translation.json
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 📦 Build for Production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm run build
+```
 
-### Analyzing the Bundle Size
+Builds a minified version in `/build`, ready to deploy.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🧠 Credits & Tools
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [React](https://reactjs.org/)
+- [Three.js](https://threejs.org/)
+- [@react-three/fiber](https://github.com/pmndrs/react-three-fiber)
+- [i18next](https://www.i18next.com/)
+- [GSAP](https://greensock.com/gsap/) *(optional animation support)*
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
