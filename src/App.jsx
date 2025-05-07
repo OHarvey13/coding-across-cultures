@@ -5,17 +5,18 @@ import Model from './components/Model'
 import LanguageToggle from './components/LanguageToggle'
 import { useTranslation } from 'react-i18next'
 import './i18n'
+import Scene from './components/Scene'
 
 
 function App() {
   const { t } = useTranslation()
-  console.log('FACT VALUE:', t('facts.japan'))
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
       <LanguageToggle />
       <Canvas camera={{ position: [0, 2, 6], fov: 50 }}>
         <ambientLight intensity={0.5} />
         <directionalLight position={[5, 5, 5]} />
+        <Scene />{/*Ground Plane*/}
         <Model path="/models/temple.glb" position={[0, 0, 0]} scale={0.5} />
         <Html center position={[0, 1.5, 0]}>
           <div style={{
