@@ -1,0 +1,72 @@
+body{
+    /* Font --> Zen Kaku Gothic New is a Japanese font */
+    font-family: 'Zen Kaku Gothic New', sans-serif; /* Font */
+
+    /* Background --> mimics an ancient Japanese scroll */
+    background: url('images/scroll-texture.jpeg') center center no-repeat fixed;
+    background-size: cover;
+    color: #2c2c2c;
+
+    
+    margin: 20px;
+    line-height: 1.5;
+}
+
+h1, header h1, footer h1{
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 2.0em;
+    text-align: center;
+    text-shadow: 1px 1px 0px #a1865e;
+}
+
+nav a.tab {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #bfa76f; /* golden parchment tone */
+    color: #2c2c2c;
+    border-radius: 8px;
+    font-family: 'Zen Kaku Gothic New', serif;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  nav a.tab:hover {
+    background-color: #e3c28c;
+    transform: scale(1.05);
+    color: #000;
+  }
+
+  .lang-toggle {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    padding: 7px 13px;
+    font-size: 15px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+
+    background-color: #bfa76f;
+    color: #2c2c2c;
+    border: 2px solid #a1865e;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: 
+      background-color 0.3s ease,
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+  
+  .lang-toggle:hover {
+    background-color: #e3c28c;
+    transform: scale(1.05);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .lang-toggle:active {
+    transform: scale(0.97);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+  }
+
