@@ -1,0 +1,180 @@
+body{
+    /* Font --> Zen Kaku Gothic New is a Japanese font */
+    font-family: 'Zen Kaku Gothic New', sans-serif; /* Font */
+
+    /* Background --> mimics an ancient Japanese scroll */
+    background: url('images/scroll-texture.jpeg') center center no-repeat fixed;
+    background-size: cover;
+    color: #2c2c2c;
+
+    
+    margin: 20px;
+    line-height: 1.5;
+}
+
+h1, header h1, footer h1{
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 2.0em;
+    text-align: center;
+    text-shadow: 1px 1px 0px #a1865e;
+}
+
+.lang-toggle {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    padding: 7px 13px;
+    font-size: 15px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+
+    background-color: #bfa76f;
+    color: #2c2c2c;
+    border: 2px solid #a1865e;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: 
+      background-color 0.3s ease,
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+}
+  
+  .lang-toggle:hover {
+    background-color: #e3c28c;
+    transform: scale(1.05);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+  
+  .lang-toggle:active {
+    transform: scale(0.97);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+.home-button {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+
+    padding: 7px 13px;
+    font-size: 15px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+
+    background-color: #bfa76f;
+    color: #2c2c2c;
+    border: 2px solid #a1865e;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: 
+        background-color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.home-button:hover {
+    background-color: #e3c28c;
+    transform: scale(1.05);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home-button:active {
+    transform: scale(0.97);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+.card-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 40px;
+  }
+  
+  .card {
+    position: relative;
+    width: 250px;
+    background-color: rgba(255, 255, 240, 0.9);
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .caption {
+    padding: 15px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    text-align: center;
+  }
+  
+  #spiderman-hanging{
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 150px;
+    z-index: 999;
+    pointer-events: none;
+    animation: drop-in 1s ease;
+  }
+  
+  @keyframes drop-in {
+    0% { opacity: 0;transform: translateY(-100px); }
+    50% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 1; transform: translateY(100); }
+  }
+
+  .modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+  }
+  
+  .modal.hidden {
+    display: none;
+  }
+  
+  .modal-content {
+    background: #fff8dc;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+  
+  .modal-content img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  

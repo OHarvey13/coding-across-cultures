@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Journey Through Kyoto</title>
+  <link rel="stylesheet" href="journey_style.css" />
+  <script defer src="toggle-lang.js"></script>
+  <script defer src="journey.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Language Toggle -->
+  <button id="toggle-lang" class="lang-toggle" data-lang="en">🌏 EN / 日本語</button>
+
+  <!-- Back Button -->
+  <button id="home-button" class="home-button" onclick="window.history.back()">  🏡 Home</button>
+ 
+  <!-- Spider-man hanging-->
+  <img id="spiderman-hanging" src="Spider-man/spiderman-hanging.gif" alt="Spider-Man" style="display: none;">
+
+
+  <div id="main">
+    <header>
+      <h1>
+        <span class="lang-en">Journey Through Kyoto</span>
+        <span class="lang-ja" style="display:none;">京都の旅</span>
+      </h1>
+    </header>
+
+    <main class="card-gallery">
+
+      <!-- Card 1 -->
+      <div class="card" onclick="openModal(this)"
+          data-title-en = "Fushimi Inari Taisha"
+          data-title-ja = "平等院"
+          data-body-en = "Fushimi Inari Taisha is famous for its thousands of vermilion torii gates, 
+                          which lead up the sacred Mount Inari. The shrine is dedicated to Inari, the Shinto god of rice."
+          data-body-ja = "伏見稲荷大社は、千本の朱色の鳥居で有名で、神聖な稲荷山を登ります。この神社は、米の神道の神である稲荷に捧げられています。" 
+          data-img= "images/Byodo-in.jpeg">
+        <img src="images/Byodo-in.jpeg" alt="Byodo-in" />
+        <div class="caption">
+          <span class="lang-en">Byodo-in.</span>
+          <span class="lang-ja" style="display:none;">平等院</span>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Webs of Culture. All rights reserved.</p>
+    </footer>
+  </div>
+  <div id = "modal" class="modal hidden">
+    <div class="modal-content">
+      <span id = "closeModal" class="close">&times;</span>
+      <img id="modal-img" src="" alt="Modal Image" />
+      <h2>
+        <span id="modal-title-en" class="lang-en"></span>
+        <span id="modal-title-ja" class="lang-ja" style="display:none;"></span>
+      </h2>
+      <p>
+        <span id="modal-body-en" class="lang-en"></span>
+        <span id="modal-body-ja" class="lang-ja" style="display:none;"></span>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -70,3 +70,18 @@ nav a.tab {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
   }
 
+#spiderman-hanging{
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  width: 150px;
+  z-index: 999;
+  pointer-events: none;
+  animation: drop-in 1s ease;
+}
+
+@keyframes drop-in {
+  0% { opacity: 0;transform: translateY(-100px); }
+  50% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 1; transform: translateY(100); }
+}

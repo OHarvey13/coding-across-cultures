@@ -1,4 +1,5 @@
 const toggleButton = document.getElementById("toggle-lang");
+const spidermanGif = document.getElementById("spiderman-hanging");
 
 toggleButton.addEventListener("click", () => {
     document.querySelectorAll(".lang-en").forEach(el => 
@@ -14,4 +15,10 @@ toggleButton.addEventListener("click", () => {
         toggleButton.innerHTML = "🌏 EN / 日本語"
         toggleButton.dataset.lang = "en";
     }
+
+    // Show spidey
+    spidermanGif.style.display = "block";
+    setTimeout(() => {
+        spidermanGif.style.display = "none";
+    }, 5000); // Hide after 3 seconds
 });
