@@ -165,7 +165,7 @@ h1, header h1, footer h1{
   
   .modal-content img {
     width: 100%;
-    max-height: 250px;
+    max-height: auto;
     object-fit: cover;
     margin-bottom: 20px;
   }
