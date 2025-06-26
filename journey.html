@@ -34,11 +34,12 @@
 
       <!-- Card 1 -->
       <div class="card" onclick="openModal(this)"
-          data-title-en = "Fushimi Inari Taisha"
+          data-title-en = "Byodo-in"
           data-title-ja = "平等院"
-          data-body-en = "Fushimi Inari Taisha is famous for its thousands of vermilion torii gates, 
-                          which lead up the sacred Mount Inari. The shrine is dedicated to Inari, the Shinto god of rice."
-          data-body-ja = "伏見稲荷大社は、千本の朱色の鳥居で有名で、神聖な稲荷山を登ります。この神社は、米の神道の神である稲荷に捧げられています。" 
+          data-body-en = "Byodo-in is a stunning temple known for its beautiful gardens and the Phoenix Hall, a UNESCO World Heritage Site. 
+                      It represents the Pure Land sect of Buddhism."
+          data-body-ja = "平等院は、美しい庭園と鳳凰堂で知られる素晴らしい寺院で、ユネスコの世界遺産です。
+                      浄土宗を代表しています。" 
           data-img= "images/Byodo-in.jpeg">
         <img src="images/Byodo-in.jpeg" alt="Byodo-in" />
         <div class="caption">
@@ -46,6 +47,22 @@
           <span class="lang-ja" style="display:none;">平等院</span>
         </div>
       </div>
+      
+      <!-- Card 2 -->
+      <div class="card" onclick="openModal(this)"
+        data-title-en = "Daigo-ji"
+        data-title-ja = "醍醐寺"
+        data-body-en = "Fushimi Inari Taisha is famous for its thousands of vermilion torii gates, 
+                      which lead up the sacred Mount Inari. The shrine is dedicated to Inari, the Shinto god of rice." 
+        data-body-ja = "伏見稲荷大社は、千本の朱色の鳥居で有名で、神聖な稲荷山を登ります。この神社は、米の神道の神である稲荷に捧げられています。" 
+        data-img= "images/Daigo-ji.jpeg"
+        data-extra-imgs="images/Daigo-ji-extra.jpeg,images/Daigo-ji-garden.jpeg">
+    <img src="images/Daigo-ji.jpeg" alt="Daigo-ji" />
+    <div class="caption">
+      <span class="lang-en">Daigo-ji.</span>
+      <span class="lang-ja" style="display:none;">醍醐寺</span>
+    </div>
+  </div>
     </main>
 
     <footer>
@@ -66,6 +83,8 @@
         <span id="modal-body-en" class="lang-en"></span>
         <span id="modal-body-ja" class="lang-ja" style="display:none;"></span>
       </p>
+
+      <div id ="modal-extra-images" class="extra-images"></div>
     </div>
   </div>
 </body>
